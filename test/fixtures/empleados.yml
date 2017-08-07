@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  email: MyString
+  salario: 1.5
+  bonos: 1.5
+  departamento: MyString
+  telefono: 1.5
+  fecha_contrato: 2017-08-04
+  gerente: 1.5
+  workingtime: 1.5
+
+two:
+  nombre: MyString
+  email: MyString
+  salario: 1.5
+  bonos: 1.5
+  departamento: MyString
+  telefono: 1.5
+  fecha_contrato: 2017-08-04
+  gerente: 1.5
+  workingtime: 1.5
