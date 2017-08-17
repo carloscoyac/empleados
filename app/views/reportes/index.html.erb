@@ -1,0 +1,68 @@
+<h2>Reportes Generados</h2>
+<h3>ESTOS SON LOS REPORTES GENERADOS APARTIR DE LA INFORMACION ALMACENADA</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+     
+      <th>Salario</th>
+      <th>Bonos</th>
+      <th>Workingtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empleados.each do |empleado| %>
+      <tr>
+        <td><%= empleado.nombre %></td>
+       
+        <td><%= empleado.salario %></td>
+        <td><%= empleado.bonos %></td>
+        <td><%= empleado.workingtime %></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%empleadosmenor = @empleadoOrdenados.first %>
+<%empleadosmayor = @empleadoOrdenados.last %>
+
+<%empleadoSalariomayor = @empleadoSalario.first %>
+<%empleadoSalariomenor = @empleadoSalario.last %>
+
+<%empleadosmenorw = @empleadoWork.first %>
+<%empleadosmayorw = @empleadoWork.last %>
+<div class="div1">
+	
+	<table>
+ 
+    <tr>
+      <th>BONO MENOR</th>
+      <th>BONO MAYOR</th>
+      <th>SALARIO MENOR</th>
+      <th>SALARIO MAYOR</th>
+      <th>MENOR HORAS TRABAJO</th>
+      <th>MAYOR HORAS DE TRABAJO</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  
+      <tr>
+        <td><%=empleadosmenor.nombre%></td>
+        <td><%=empleadosmayor.nombre%></td>
+        <td><%=empleadoSalariomayor.nombre%></td>
+        <td><%=empleadoSalariomenor.nombre%></td>
+        <td> <%=empleadosmenorw.nombre%></td>
+        <td> <%=empleadosmayorw.nombre%></td>
+        
+      
+      </tr>
+  
+</table>
+</div>
+
+<%= link_to  'Back', empleados_path %>
